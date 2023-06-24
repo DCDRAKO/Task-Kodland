@@ -1,0 +1,431 @@
+*{
+    font-family: 'Geologica', sans-serif;
+    font-size: 16px;
+}
+
+body{
+    background-color: #fff;
+    }
+    
+.Encabezado{
+    background-color: rgb(255, 180, 92);
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    /* border: 2px green solid;*/
+    min-width: 23em;
+}
+.Logo__img{
+    height: 5.6em;
+}
+.Nav{
+    display: flex;
+    justify-content: flex-end;
+    
+    /* border: purple 3px solid; */
+    flex-grow: 1;
+    padding: 2%;
+}
+.Boton-Abrir,.Nav__Cerrar{
+    height: 2em;
+    display: none;
+    
+}
+.Menu{
+    /* border: 3px black solid;*/
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    justify-content: flex-end;
+    padding-right: 8%;
+    
+}
+.Menu__Item{
+    margin-left: 2%;
+    padding: auto;
+    /* border: 2px green solid;*/
+}
+.Menu__Link{
+    text-decoration-line: none;
+    font-size: 1em;
+    color: #000;
+    letter-spacing: 1.5px;
+}
+
+.Banner{
+    /* border: 5px rgb(128, 0, 0) solid;*/
+    background-color: rgb(255, 180, 92);
+    display: flex;
+    min-width: 23em;
+}
+.Textos-Banner{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    /* border: 5px rgb(0, 2, 128) solid; */
+    min-width: 45%;  
+}
+.Textos-Banner__Titulo{
+    /* border: 2px rgb(102, 0, 128) solid;*/
+    color: #fff;
+    margin: 0;
+    font-size: calc(10em + 1vw);
+    width: 80%;
+}
+
+.Textos-Banner__Descripcion{
+    /* border: 2px rgb(0, 124, 128) solid;*/
+    font-size: calc(0.5em + 1vw);
+    margin: 1%;
+    width: 80%;
+    color: #fff;
+    letter-spacing: 1.5px;
+}
+
+.Textos-Banner__Boton{
+    border: none;
+    background-color: rgb(203, 243, 240);
+    width: 22%;
+    height: 8%;
+    align-self: flex-start;
+    margin: 5% 10% 25%;
+    font-size: calc(0.3em + 1vw); 
+    letter-spacing: 1.5px;
+    
+}
+.Imagen-Banner{
+    /* border: 5px green solid;*/
+    min-width: 50%; 
+    margin-right: 5em;
+    flex-grow: 1;
+}
+
+.Parrafo{
+    flex-direction: column;
+    display: flex;
+    height: 30em;
+    background-color: #fff;
+    width: 100%;
+}
+.Parrafo__Titulo{
+    margin: auto;
+    margin-bottom: 0;
+    font-size: 2em;
+}
+.Parrafo__Texto{
+    font-size: 1.2em;
+    width: 45%;
+    margin: auto;
+    margin-top: 1%;
+    text-align: center;
+}
+
+.Productos{
+    display: flex;
+    flex-direction: column;
+    height: 40em;
+    background-color: rgb(203, 243, 240);
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Productos__Titulo{
+    font-size: 2em;
+    margin-top: 2em;
+}
+.Opcion{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 1em;
+}
+
+.Opcion__Contentenedor{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: 18em;
+}
+
+.Opcion__Imagen{
+    transform: scale(0.9);
+}
+
+.Opcion__Nombre{
+    align-self: center;
+    margin-bottom: 1em;
+
+}
+.Opcion__Boton{
+    border: none;
+    background-color: rgb(255, 180, 92);
+    height: 2.3em;
+    width: 10em;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin: auto;
+}
+
+.Ejemplos{
+    display: flex;
+    align-items: center;
+    background-image: url(images/bg-grid.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 35em;
+}
+
+.Textos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 50%;
+    margin-left: 5.3em; 
+}
+
+.Textos__Titulo{
+    width: 100%;
+    font-size: 2em;
+}
+
+.Textos__Descripcion{
+    font-size: 1.2em;
+}
+
+.Foto{
+    max-width: 25%;
+    justify-self: center;
+    margin-right: 11em; 
+}
+
+/*Responsive*/
+
+@media screen and (min-width: 360px) and (max-width: 719px) {
+
+    .body .stop-scrolling {
+        height: 100%;
+        overflow: hidden;
+    }
+    .Nav{
+        /* display: none; */
+        opacity: 0;
+        visibility: hidden;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 30%;
+        height: 258vmax;
+        position: absolute;
+        z-index: 10;
+        background-color:  rgb(238, 206, 169);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding-top: 2rem;
+        box-shadow: 0 0 0 1000vmax rgba(0, 0, 0, .5);
+    }
+
+    .Nav.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+    .Boton-Abrir,.Nav__Cerrar{
+        display: block;
+        margin-right: 5%;
+    }
+    .Menu{
+        flex-direction: column;
+    }
+
+    .Textos-Banner{
+        min-width: 50%;
+    }
+    .Textos-Banner__Titulo{ 
+        font-size: 2em;
+    }
+    .Textos-Banner__Descripcion{
+       margin: 10% 0 0; 
+    }
+    .Textos-Banner__Boton{
+        margin: 10% 0 0 10%;
+        width: 30%;
+        height: 12%;
+        font-weight: 500;
+        font-size: 0.65em;
+    }
+    .Imagen-Banner{
+        
+        margin: 0 0 0 10px;
+    }
+    .Imagen-Banner_1{
+        transform: scale(0.8);
+    }
+
+
+    .Parrafo{
+        height: 15em;
+    }
+    .Parrafo__Titulo{
+        font-size: 1.3em;
+    }
+    .Parrafo__Texto{
+        margin-top: 2em;
+        font-size: 0.8em;
+        width: 90%;
+    }
+
+    .Productos{
+        justify-content: space-around;
+        justify-items: center;
+        align-items: center;
+        height: 75em;
+        margin: auto;
+        
+    }
+
+    .Productos__Titulo{
+        font-size: 1.3em;
+    }
+
+    .Opcion{
+        flex-direction: column;
+        justify-self: center;
+        align-self: center;
+        align-items: center;
+    }
+    .Opcion__Contentenedor{
+        margin: auto;
+    }
+
+    .Opcion__Imagen{
+        transform: scale(0.6);
+    }
+
+    .Opcion__Nombre{
+        margin-bottom: 2em;
+    }
+
+    .Opcion__Boton{
+        width: 5em;
+        font-size: 1em;
+    }
+
+    .Ejemplos{
+        flex-direction: column; 
+        background-size: cover;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+    }
+    .Textos{
+        max-width:90%;
+        margin: 2em 0 0 0;
+    }
+    .Textos__Titulo{
+        font-size: 1.3em;
+        width: 50%;
+        margin-bottom: 1em;
+        text-align: center;
+    }
+
+    .Textos__Descripcion{
+        font-size: 0.8em;
+        text-align: center;
+    }
+
+    .Foto{
+        max-width: 90%;
+        margin: 2em 0 0 0;
+    }
+    .Foto__1{
+        transform: scale(0.9);
+    }
+
+
+    
+}
+@media screen and (min-width: 720px) and (max-width: 1024px) {
+    .Textos-Banner{
+        min-width: 50%;
+    }
+    .Textos-Banner__Titulo{ 
+        font-size: 5em;
+    }
+    .Textos-Banner__Descripcion{
+       margin: 10% 0 0;
+       font-size: 1.1em;
+    }
+    .Textos-Banner__Boton{
+        margin: 10% 0 0 10%;
+        width: 30%;
+        height: 12%;
+        font-weight: 600;
+        font-size: 1em;
+    }
+    .Imagen-Banner{
+        margin: 0 0 0 0.6em;
+    }
+    .Imagen-Banner_1{
+        transform: scale(0.9);
+    }
+
+    .Parrafo{
+        height: 25em;
+    }
+    .Parrafo__Texto{
+        margin-top: 2em;
+        font-size: 1.18em;
+        width: 90%;
+    }
+
+    .Productos{
+        height: 30em;
+        justify-items: center;
+    }
+    
+    .Opcion__Imagen{
+        transform: scale(0.7);
+    }
+    .Opcion__Boton{
+        width: 6em;
+    }
+    .Opcion__Nombre{
+        justify-self: center;
+        font-size: 0.9EM;
+    }
+
+    .Ejemplos{
+        flex-direction: column; 
+        background-size: cover;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+    }
+    .Textos{
+        max-width:90%;
+        margin: 2em 0 0 0;
+    }
+    .Textos__Titulo{
+        font-size: 2em;
+        width: 50%;
+        margin-bottom: 1em;
+        text-align: center;
+    }
+
+    .Textos__Descripcion{
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .Foto{
+        max-width: 90%;
+        margin: 2em 0 0 0;
+    }
+    .Foto__1{
+        transform: scale(0.9);
+    }
+}
+
+
+
